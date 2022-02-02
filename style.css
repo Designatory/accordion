@@ -1,0 +1,77 @@
+body {
+    background:rgba(228, 21, 21, 0.801);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    color:#ffffff;
+    text-align:center;
+    margin-top: 25vh;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.accordion-designatory {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 600px;
+    margin:auto;
+}
+.accordion-desig {
+    /* width: 100%; */
+    color: white;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.accordion-desig:last-child{
+    margin-bottom: 0;
+}
+.accordion-desig-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(4,57,94,.8);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+}
+.accordion-desig-label:hover {
+    background: rgba(4,57,94,1);
+}
+.accordion-desig-label::after {
+    content: "\276F";
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.accordion-desig-content {
+    max-height: 0;
+    background: white;
+    transition: all 0.3s;
+}
+.accordion-desig-content p{
+    margin: 0;
+    color: rgba(4,57,94,.7);
+    font-size: 18px;
+}
+input:checked + .accordion-desig-label {
+    background: rgba(4,57,94,1);
+}
+input:checked + .accordion-desig-label::after {
+    transform: rotate(90deg);
+}
+input:checked ~ .accordion-desig-content {
+    max-height: 100vh;
+    padding: 16px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.white{
+    color: white;
+}
